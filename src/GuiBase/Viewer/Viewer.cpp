@@ -396,12 +396,12 @@ namespace Ra
         keyReleased(event->key());
         m_camera->handleKeyReleaseEvent( event );
 
-        /*
+
         if ( Gui::KeyMappingManager::getInstance()->actionTriggered( event, Gui::KeyMappingManager::VIEWER_TOGGLE_WIREFRAME ) && !event->isAutoRepeat())
         {
             m_currentRenderer->toggleWireframe();
         }
-        */
+
         if (event->key() == Qt::Key_C && event->modifiers() == Qt::NoModifier)
         {
             m_isBrushPickingEnabled = !m_isBrushPickingEnabled;
