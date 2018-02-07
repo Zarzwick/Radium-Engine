@@ -13,10 +13,25 @@ namespace Ra {
         {
         }
 
+
+        //
+        // Renderer pre/post calls
+        //
+
+        int LightManager::count() const
+        {
+            return m_data->size();
+        }
+
+
+        //
+        // System
+        //
+
         void LightManager::generateTasks( Core::TaskQueue* taskQueue, const Engine::FrameInfo& frameInfo )
         {
         }
-    
+
         void LightManager::handleAssetLoading( Entity* entity, const Asset::FileData* data )
         {
             // ...
