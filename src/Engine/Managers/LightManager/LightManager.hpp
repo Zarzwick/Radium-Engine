@@ -33,6 +33,9 @@ namespace Ra {
 
             /// Virtual destructor
             virtual ~LightManager();
+
+            /// Get a pointer to the li-th Light.
+            virtual const Light* getLight(uint li) const = 0;
             
             //
             // Calls for the Renderer
