@@ -225,7 +225,7 @@ namespace Ra
 
                     m_program->detach( m_shaderObjects[i].get() );
                     loadShader( getGLenumAsType( m_shaderObjects[i]->type() ), m_shaderObjects[i]->name(),
-                                m_configuration.getProperties(), m_configuration.getIncludes() );
+                                m_configuration.getProperties(), m_configuration.getIncludes(), m_configuration.m_version );
                 }
             }
 
