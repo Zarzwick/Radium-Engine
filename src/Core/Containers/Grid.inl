@@ -313,7 +313,7 @@ namespace Ra
         typename Grid<T,D>::Iterator& Grid<T,D>::Iterator::operator+=(const typename  Grid<T,D>::OffsetVector &idx)
         {
             CORE_ASSERT( isValidOffset(idx), "Invalid offset vector");
-            setFromVector( (getVector().cast<int>()  + idx).cast<uint>() );
+            setFromVector( (getVector().template cast<int>() + idx).template cast<uint>() );
             return *this;
         }
 
@@ -347,8 +347,8 @@ namespace Ra
         template< typename T, uint D>
         bool Grid<T,D>::Iterator::isValidOffset(const typename Grid<T,D>::OffsetVector &idx)
         {
-            OffsetVector  pos = getVector().cast<int>() + idx;
-            return !((pos.array() < 0 ).any() || (pos.array() >= m_sizes.cast<int>().array()).any());
+            OffsetVector  pos = getVector().template cast<int>() + idx;
+            return !((pos.array() < 0 ).any() || (pos.array() >= m_sizes.template cast<int>().array()).any());
         }
 
     }

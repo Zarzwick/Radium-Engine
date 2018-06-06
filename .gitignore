@@ -84,3 +84,5 @@ lib/
 #Auto-generated plugins registration file
 src/QRadium/Systems.cpp
 src/QRadium/Version.cpp
+
+cmake-build-*/
